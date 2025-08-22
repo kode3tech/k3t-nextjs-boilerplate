@@ -1,0 +1,15 @@
+{
+  "recommendations": [
+    "bradlc.vscode-tailwindcss",
+    "esbenp.prettier-vscode",
+    "ms-vscode.vscode-typescript-next",
+    "steoates.autoimport-es6-ts",
+    "formulahendry.auto-rename-tag",
+    "christian-kohler.path-intellisense",
+    "ms-vscode.vscode-jest",
+    "ms-playwright.playwright",
+    "unifiedjs.vscode-mdx",
+    "bradlc.vscode-tailwindcss",
+    "ms-vscode.vscode-json"
+  ]
+}

@@ -1,6 +1,24 @@
 {
   "name": "k3t-nextjs-boilerplate",
   "version": "0.1.0",
+  "description": "A modern Next.js boilerplate with TypeScript, Tailwind CSS, Jest, Storybook, and more",
+  "author": "Kode3 Tech",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kode3tech/k3t-nextjs-boilerplate.git"
+  },
+  "keywords": [
+    "nextjs",
+    "react",
+    "typescript",
+    "tailwindcss",
+    "boilerplate",
+    "jest",
+    "storybook",
+    "eslint",
+    "prettier"
+  ],
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
