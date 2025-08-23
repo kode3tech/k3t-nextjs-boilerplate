@@ -2,48 +2,48 @@
 
 [![CI](https://github.com/kode3tech/k3t-nextjs-boilerplate/actions/workflows/ci.yml/badge.svg)](https://github.com/kode3tech/k3t-nextjs-boilerplate/actions/workflows/ci.yml)
 
-Um boilerplate completo e moderno para desenvolvimento de aplicações React com Next.js, configurado com as melhores práticas de desenvolvimento, ferramentas de qualidade de código e automação.
+A complete and modern boilerplate for developing React applications with Next.js, configured with development best practices, code quality tools, and automation.
 
-## ⚡ Tecnologias Utilizadas
+## ⚡ Technologies Used
 
 ### Core Framework
 
-- **[Next.js 15+](https://nextjs.org/)** - Framework React com App Router, Turbopack e otimizações avançadas
-- **[React 19](https://react.dev/)** - Biblioteca para interfaces de usuário
-- **[TypeScript](https://www.typescriptlang.org/)** - Superset JavaScript com tipagem estática
+- **[Next.js 15+](https://nextjs.org/)** - React framework with App Router, Turbopack and advanced optimizations
+- **[React 19](https://react.dev/)** - Library for building user interfaces
+- **[TypeScript](https://www.typescriptlang.org/)** - JavaScript superset with static typing
 
-### Estilização
+### Styling
 
-- **[Tailwind CSS 4](https://tailwindcss.com/)** - Framework CSS utility-first
-- **[PostCSS](https://postcss.org/)** - Ferramenta para transformação de CSS
+- **[Tailwind CSS 4](https://tailwindcss.com/)** - Utility-first CSS framework
+- **[PostCSS](https://postcss.org/)** - Tool for CSS transformation
 
-### Testes
+### Testing
 
-- **[Jest](https://jestjs.io/)** - Framework de testes JavaScript
-- **[React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)** - Utilitários para teste de componentes React
-- **[Vitest](https://vitest.dev/)** - Runner de testes rápido
-- **[Playwright](https://playwright.dev/)** - Framework para testes end-to-end
+- **[Jest](https://jestjs.io/)** - JavaScript testing framework
+- **[React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)** - Utilities for testing React components
+- **[Vitest](https://vitest.dev/)** - Fast test runner
+- **[Playwright](https://playwright.dev/)** - Framework for end-to-end testing
 
-### Documentação
+### Documentation
 
-- **[Storybook](https://storybook.js.org/)** - Ferramenta para desenvolvimento e documentação de componentes
+- **[Storybook](https://storybook.js.org/)** - Tool for component development and documentation
 
-### Qualidade de Código
+### Code Quality
 
-- **[ESLint](https://eslint.org/)** - Linter para identificação de problemas no código
-- **[Prettier](https://prettier.io/)** - Formatador de código
-- **[Husky](https://typicode.github.io/husky/)** - Git hooks para automação
-- **[Lint-staged](https://github.com/okonet/lint-staged)** - Execução de linters em arquivos staged
+- **[ESLint](https://eslint.org/)** - Linter for identifying code problems
+- **[Prettier](https://prettier.io/)** - Code formatter
+- **[Husky](https://typicode.github.io/husky/)** - Git hooks for automation
+- **[Lint-staged](https://github.com/okonet/lint-staged)** - Run linters on staged files
 
-### Geração de Código
+### Code Generation
 
-- **[Plop](https://plopjs.com/)** - Gerador de código baseado em templates
+- **[Plop](https://plopjs.com/)** - Template-based code generator
 
 ### CI/CD
 
-- **[GitHub Actions](https://docs.github.com/en/actions)** - Pipeline de integração e deployment contínuo
+- **[GitHub Actions](https://docs.github.com/en/actions)** - Continuous integration and deployment pipeline
 
-## 🛠️ Estrutura do Projeto
+## 🛠️ Project Structure
 
 ```
 k3t-nextjs-boilerplate/
@@ -67,43 +67,43 @@ k3t-nextjs-boilerplate/
 │           └── test.tsx      # Testes
 ├── jest.config.js            # Configuração do Jest
 ├── vitest.config.ts          # Configuração do Vitest
-└── package.json              # Dependências e scripts
+└── package.json              # Dependencies and scripts
 ```
 
-## 🚀 Como Usar Este Boilerplate
+## 🚀 How to Use This Boilerplate
 
-### 1. Crie um Novo Projeto
+### 1. Create a New Project
 
-Use o comando `create-next-app` com este boilerplate como exemplo:
+Use the `create-next-app` command with this boilerplate as an example:
 
 ```bash
-npx create-next-app@latest meu-novo-projeto --example https://github.com/kode3tech/k3t-nextjs-boilerplate
-cd meu-novo-projeto
+npx create-next-app@latest my-new-project --example https://github.com/kode3tech/k3t-nextjs-boilerplate
+cd my-new-project
 ```
 
-### 2. Instale as Dependências
+### 2. Install Dependencies
 
 ```bash
 npm install
-# ou
+# or
 yarn install
-# ou
+# or
 pnpm install
 ```
 
-### 3. Configure o Projeto
+### 3. Configure the Project
 
-1. **Atualize o `package.json`**:
+1. **Update `package.json`**:
 
    ```json
    {
-     "name": "meu-novo-projeto",
+     "name": "my-new-project",
      "version": "0.1.0",
-     "description": "Descrição do seu projeto"
+     "description": "Description of your project"
    }
    ```
 
-2. **Initialize Git (se necessário)**:
+2. **Initialize Git (if necessary)**:
 
    ```bash
    git init
@@ -111,71 +111,71 @@ pnpm install
    git commit -m "feat: initial project setup"
    ```
 
-3. **Personalize o conteúdo**:
-   - Edite `src/app/page.tsx` para sua página inicial
-   - Atualize `src/app/layout.tsx` com metadados do seu projeto
-   - Substitua o logo em `public/logo.svg`
+3. **Customize the content**:
+   - Edit `src/app/page.tsx` for your homepage
+   - Update `src/app/layout.tsx` with your project metadata
+   - Replace the logo in `public/logo.svg`
 
-## 📋 Scripts Disponíveis
+## 📋 Available Scripts
 
-| Script                    | Descrição                                          |
-| ------------------------- | -------------------------------------------------- |
-| `npm run dev`             | Inicia o servidor de desenvolvimento com Turbopack |
-| `npm run build`           | Cria build de produção                             |
-| `npm run start`           | Inicia servidor de produção                        |
-| `npm run lint`            | Executa ESLint                                     |
-| `npm run test`            | Executa testes com Jest                            |
-| `npm run test:watch`      | Executa testes em modo watch                       |
-| `npm run test:ci`         | Executa testes para CI                             |
-| `npm run gen:component`   | Gera novo componente com template                  |
-| `npm run storybook`       | Inicia Storybook                                   |
-| `npm run build-storybook` | Build do Storybook                                 |
+| Script                    | Description                                         |
+| ------------------------- | --------------------------------------------------- |
+| `npm run dev`             | Start development server with Turbopack            |
+| `npm run build`           | Create production build                             |
+| `npm run start`           | Start production server                             |
+| `npm run lint`            | Run ESLint                                          |
+| `npm run test`            | Run tests with Jest                                 |
+| `npm run test:watch`      | Run tests in watch mode                             |
+| `npm run test:ci`         | Run tests for CI                                    |
+| `npm run gen:component`   | Generate new component with template               |
+| `npm run storybook`       | Start Storybook                                     |
+| `npm run build-storybook` | Build Storybook                                     |
 
-## 🧩 Gerando Componentes
+## 🧩 Generating Components
 
-Use o gerador automático para criar novos componentes:
+Use the automatic generator to create new components:
 
 ```bash
 npm run gen:component
 ```
 
-Isso criará:
+This will create:
 
-- `src/components/SeuComponente/index.tsx` - Componente React
-- `src/components/SeuComponente/stories.tsx` - Stories do Storybook
-- `src/components/SeuComponente/test.tsx` - Testes unitários
+- `src/components/YourComponent/index.tsx` - React component
+- `src/components/YourComponent/stories.tsx` - Storybook stories
+- `src/components/YourComponent/test.tsx` - Unit tests
 
-## 🧪 Testes
+## 🧪 Testing
 
-### Testes Unitários
+### Unit Tests
 
 ```bash
-npm run test              # Executa todos os testes
-npm run test:watch        # Modo watch
-npm run test:ci          # Para CI/CD
+npm run test              # Run all tests
+npm run test:watch        # Watch mode
+npm run test:ci          # For CI/CD
 ```
 
-### Testes E2E (Configuração Manual)
+### E2E Tests (Manual Setup)
 
 ```bash
-npx playwright install    # Instala browsers
-npx playwright test       # Executa testes E2E
+npx playwright install    # Install browsers
+npx playwright test       # Run E2E tests
 ```
 
 ## 📚 Storybook
 
-Desenvolva e documente componentes isoladamente:
+Develop and document components in isolation:
 
 ```bash
-npm run storybook         # Inicia em http://localhost:6006
-npm run build-storybook   # Build para produção
+npm run storybook         # Start at http://localhost:6006
+npm run build-storybook   # Build for production
 ```
 
-## 🔧 Configuração de IDE
+## 🔧 IDE Setup
 
 ### VS Code
 
-Extensões recomendadas:
+Recommended extensions:
 
 - ES7+ React/Redux/React-Native snippets
 - Tailwind CSS IntelliSense
@@ -183,60 +183,60 @@ Extensões recomendadas:
 - Prettier - Code formatter
 - ESLint
 
-### Configuração do EditorConfig
+### EditorConfig Setup
 
-O projeto inclui `.editorconfig` para consistência entre diferentes editores.
+The project includes `.editorconfig` for consistency across different editors.
 
 ## 🚢 Deploy
 
-### Vercel (Recomendado)
+### Vercel (Recommended)
 
-1. Conecte seu repositório no [Vercel](https://vercel.com)
-2. Configure as variáveis de ambiente
-3. Deploy automático a cada push
+1. Connect your repository on [Vercel](https://vercel.com)
+2. Configure environment variables
+3. Automatic deployment on every push
 
-### Outras Plataformas
+### Other Platforms
 
-- **Netlify**: Suporte nativo para Next.js
-- **AWS Amplify**: Deploy com CI/CD integrado
-- **Docker**: Dockerfile incluído para containerização
+- **Netlify**: Native Next.js support
+- **AWS Amplify**: Deploy with integrated CI/CD
+- **Docker**: Dockerfile included for containerization
 
-## 🤝 Contribuindo
+## 🤝 Contributing
 
-1. Fork o projeto
-2. Crie uma branch (`git checkout -b feature/nova-feature`)
-3. Commit suas mudanças (`git commit -m 'feat: adiciona nova feature'`)
-4. Push para a branch (`git push origin feature/nova-feature`)
-5. Abra um Pull Request
+1. Fork the project
+2. Create a branch (`git checkout -b feature/new-feature`)
+3. Commit your changes (`git commit -m 'feat: add new feature'`)
+4. Push to the branch (`git push origin feature/new-feature`)
+5. Open a Pull Request
 
-## 📋 Convenções
+## 📋 Conventions
 
 ### Commits
 
-Seguimos o padrão [Conventional Commits](https://www.conventionalcommits.org/):
+We follow the [Conventional Commits](https://www.conventionalcommits.org/) standard:
 
-- `feat:` para novas funcionalidades
-- `fix:` para correções
-- `docs:` para documentação
-- `style:` para formatação
-- `refactor:` para refatoração
-- `test:` para testes
+- `feat:` for new features
+- `fix:` for bug fixes
+- `docs:` for documentation
+- `style:` for formatting
+- `refactor:` for refactoring
+- `test:` for tests
 
-### Código
+### Code
 
-- Use TypeScript para todos os arquivos
-- Componentes em PascalCase
-- Arquivos de configuração em kebab-case
-- Use Prettier para formatação automática
+- Use TypeScript for all files
+- Components in PascalCase
+- Configuration files in kebab-case
+- Use Prettier for automatic formatting
 
-## 📄 Licença
+## 📄 License
 
-Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+This project is under the MIT license. See the [LICENSE](LICENSE) file for more details.
 
-## 🏢 Sobre a Kode3 Tech
+## 🏢 About Kode3 Tech
 
-Transformamos ideias em soluções eficientes e inovadoras.
+We transform ideas into efficient and innovative solutions.
 
 ---
 
-⭐ Se este boilerplate foi útil, considere dar uma estrela no repositório!
+⭐ If this boilerplate was useful, consider giving the repository a star!
