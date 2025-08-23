@@ -5,6 +5,25 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.1.0] - 2025-08-23
+
+### Added
+- 🌐 **Portuguese README** (`README_PT.md`) for Brazilian developers
+- 📋 **GitHub repository description** (`.github/DESCRIPTION`) for better discoverability
+- ✨ **Enhanced Features section** in README with detailed highlights
+- 🔍 **30+ SEO-optimized keywords** in package.json for better searchability
+
+### Improved  
+- 📈 **SEO optimization** for GitHub repository discovery
+- 🎯 **Enhanced README.md** with feature highlights and better structure
+- 🏷️ **Expanded keywords** covering Next.js, React, TypeScript, testing, and developer tools
+- 🌍 **Multi-language support** (English/Portuguese) for broader reach
+
+### SEO Enhancements
+- Keywords now include: `nextjs-boilerplate`, `react-typescript`, `tailwind-template`, `frontend-template`
+- Better discoverability for terms like `modern-stack`, `developer-tools`, `code-quality`
+- Optimized for searches related to `testing`, `ci-cd`, `component-library`
+
 ## [1.0.1] - 2025-08-23
 
 ### Improved

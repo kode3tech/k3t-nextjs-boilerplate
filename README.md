@@ -2,7 +2,22 @@
 
 [![CI](https://github.com/kode3tech/k3t-nextjs-boilerplate/actions/workflows/ci.yml/badge.svg)](https://github.com/kode3tech/k3t-nextjs-boilerplate/actions/workflows/ci.yml)
 
-A complete and modern boilerplate for developing React applications with Next.js, configured with development best practices, code quality tools, and automation.
+A complete and modern **Next.js 15+ boilerplate** for developing React applications with TypeScript, configured with development best practices, code quality tools, and automation. Perfect starter template for frontend developers who want a production-ready setup.
+
+## ✨ Features
+
+- 🏗️ **Next.js 15+ with App Router** - Latest React framework with Turbopack
+- 🔷 **TypeScript** - Full type safety and better developer experience
+- 🎨 **Tailwind CSS 4** - Modern utility-first CSS framework
+- 🧪 **Complete Testing Suite** - Jest, React Testing Library, Vitest, and Playwright
+- 📚 **Storybook** - Component development and documentation
+- 🔍 **Code Quality** - ESLint, Prettier, Husky, and Lint-staged
+- 🚀 **CI/CD Pipeline** - GitHub Actions for automated testing and deployment
+- 🛠️ **Code Generation** - Plop templates for rapid development
+- 📦 **Modern Stack** - Latest versions of all dependencies
+- 🏆 **Best Practices** - Industry-standard project structure and conventions
+
+**English** | [Português](README_PT.md)
 
 ## ⚡ Technologies Used
 
