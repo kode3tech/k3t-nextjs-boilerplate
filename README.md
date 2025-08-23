@@ -49,24 +49,24 @@ A complete and modern boilerplate for developing React applications with Next.js
 k3t-nextjs-boilerplate/
 ├── .github/
 │   ├── workflows/
-│   │   └── ci.yml              # Pipeline CI/CD
-│   └── copilot-instructions.md # Instruções para IA
+│   │   └── ci.yml              # CI/CD Pipeline
+│   └── copilot-instructions.md # AI Instructions
 ├── generators/
-│   ├── templates/              # Templates do Plop
-│   └── plopfile.js            # Configuração do gerador
-├── public/                     # Arquivos estáticos
+│   ├── templates/              # Plop Templates
+│   └── plopfile.js            # Generator Configuration
+├── public/                     # Static Files
 ├── src/
 │   ├── app/                   # App Router (Next.js 13+)
-│   │   ├── globals.css       # Estilos globais
-│   │   ├── layout.tsx        # Layout raiz
-│   │   └── page.tsx          # Página inicial
-│   └── components/           # Componentes reutilizáveis
+│   │   ├── globals.css       # Global Styles
+│   │   ├── layout.tsx        # Root Layout
+│   │   └── page.tsx          # Home Page
+│   └── components/           # Reusable Components
 │       └── Main/
-│           ├── index.tsx     # Componente
+│           ├── index.tsx     # Component
 │           ├── stories.tsx   # Storybook stories
-│           └── test.tsx      # Testes
-├── jest.config.js            # Configuração do Jest
-├── vitest.config.ts          # Configuração do Vitest
+│           └── test.tsx      # Tests
+├── jest.config.js            # Jest Configuration
+├── vitest.config.ts          # Vitest Configuration
 └── package.json              # Dependencies and scripts
 ```
 
