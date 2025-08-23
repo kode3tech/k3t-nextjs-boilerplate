@@ -5,6 +5,37 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.2.0] - 2025-08-23
+
+### Added
+
+- 🐳 **Complete Docker Support** with optimized multi-stage builds
+- 📦 **Production Dockerfile** with ~100MB final image size
+- 🛠️ **Development Dockerfile** with hot reload support
+- 🔧 **docker-compose.yml** for easy orchestration
+- 📋 **Docker convenience script** (`docker.sh`) for common operations
+- 🚀 **NPM scripts** for Docker operations
+- 📖 **Comprehensive Docker documentation** (`DOCKER.md`)
+- 🔒 **Security features** - non-root user in containers
+- ⚙️ **Next.js standalone output** for optimized Docker builds
+
+### Improved
+
+- 🏗️ **Next.js configuration** optimized for containerization
+- 📄 **Dockerfile.dev** for development with volume mounting
+- 🐳 **Multi-stage builds** for production optimization
+- 🔍 **Enhanced .dockerignore** for optimized build context
+- 📋 **Extended keywords** in package.json for Docker discoverability
+
+### Docker Features
+
+- **Multi-stage builds** - Optimized for production
+- **Alpine Linux base** - Minimal image footprint
+- **Non-root user** - Enhanced security
+- **Development support** - Hot reload with volumes
+- **Production ready** - Standalone Next.js output
+- **Convenience scripts** - Easy Docker operations
+
 ## [1.1.0] - 2025-08-23
 
 ### Added
