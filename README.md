@@ -1,6 +1,19 @@
 # 🚀 K3T Next.js Boilerplate
 
+<div align="center">
+
 [![CI](https://github.com/kode3tech/k3t-nextjs-boilerplate/actions/workflows/ci.yml/badge.svg)](https://github.com/kode3tech/k3t-nextjs-boilerplate/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![GitHub release](https://img.shields.io/github/v/release/kode3tech/k3t-nextjs-boilerplate)](https://github.com/kode3tech/k3t-nextjs-boilerplate/releases)
+[![GitHub stars](https://img.shields.io/github/stars/kode3tech/k3t-nextjs-boilerplate?style=social)](https://github.com/kode3tech/k3t-nextjs-boilerplate/stargazers)
+
+![Next.js](https://img.shields.io/badge/Next.js-15+-black?logo=next.js)
+![React](https://img.shields.io/badge/React-19-61DAFB?logo=react)
+![TypeScript](https://img.shields.io/badge/TypeScript-5+-3178C6?logo=typescript)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4-38B2AC?logo=tailwind-css)
+![Docker](https://img.shields.io/badge/Docker-Ready-2496ED?logo=docker)
+
+</div>
 
 A complete and modern **Next.js 15+ boilerplate** for developing React applications with TypeScript, configured with development best practices, code quality tools, and automation. Perfect starter template for frontend developers who want a production-ready setup.
 
