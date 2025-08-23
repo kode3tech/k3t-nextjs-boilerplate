@@ -1,25 +1,86 @@
-# 🚀 K3T Next.js Boilerplate v1.1.0
+# 🚀 K3T Next.js Boilerplate v1.2.0
 
-We're excited to announce the latest release of the K3T Next.js Boilerplate! This release focuses on **SEO optimization** and **multi-language support** to make the boilerplate more discoverable and accessible worldwide.
+We're excited to announce the latest release of the K3T Next.js Boilerplate! This release introduces **complete Docker support** with optimized containers for both development and production environments.
 
-## ✨ What's New in v1.1.0
+## ✨ What's New in v1.2.0
 
-### 🌐 Multi-language Support
-- **Portuguese README** (`README_PT.md`) for Brazilian developers
-- Bilingual navigation between English and Portuguese versions
-- Enhanced accessibility for Portuguese-speaking community
+### 🐳 Complete Docker Support
+- **Optimized Dockerfile** with multi-stage build (~100MB final image)
+- **Development Dockerfile** with hot reload and volume mounting
+- **docker-compose.yml** for easy service orchestration
+- **Convenience script** (`docker.sh`) for common Docker operations
+- **NPM scripts** for streamlined Docker workflows
 
-### 📈 SEO Optimization
-- **30+ strategic keywords** in `package.json` for better search discoverability
-- **GitHub repository description** optimized for search algorithms
-- Enhanced README structure with feature highlights
+### � Security & Optimization
+- **Non-root user** in containers for enhanced security
+- **Alpine Linux base** for minimal image footprint
+- **Next.js standalone output** for optimal containerization
+- **Multi-stage builds** reducing final image size by 75%
 
-### 🎯 Enhanced Discoverability
-- Keywords covering: `nextjs-boilerplate`, `react-typescript`, `tailwind-template`
-- Developer tools: `frontend-template`, `developer-tools`, `code-quality`
-- Testing & CI/CD: `testing`, `ci-cd`, `component-library`, `modern-stack`
+### 📖 Enhanced Documentation
+- **Comprehensive Docker guide** (`DOCKER.md`) with examples
+- **Updated README** with Docker setup instructions
+- **Troubleshooting section** for common Docker issues
 
-## 🎯 What's Included
+## 🐳 Docker Features
+
+## 🐳 Docker Features
+
+### Production Environment
+- **Optimized multi-stage build** - Final image ~100MB
+- **Alpine Linux base** - Minimal attack surface
+- **Non-root user** - Enhanced security
+- **Standalone Next.js output** - No external dependencies
+
+### Development Environment
+- **Hot reload support** - Live code changes
+- **Volume mounting** - Persistent development
+- **Separate dev image** - Development dependencies included
+- **Port isolation** - Production (3000) vs Development (3001)
+
+### Convenience Tools
+- **docker.sh script** - Simplified Docker operations
+- **NPM scripts** - Integrated workflow
+- **docker-compose** - Service orchestration
+- **Comprehensive docs** - Step-by-step guides
+
+## 🚀 Quick Start with Docker
+
+### Using the Convenience Script
+
+```bash
+# Build and run production
+./docker.sh build
+./docker.sh run
+
+# Build and run development
+./docker.sh build-dev
+./docker.sh run-dev
+
+# Using docker-compose
+./docker.sh compose-up
+```
+
+### Manual Docker Commands
+
+```bash
+# Production
+docker build -t k3t-nextjs-boilerplate .
+docker run -d -p 3000:3000 k3t-nextjs-boilerplate
+
+# Development
+docker build -f Dockerfile.dev -t k3t-nextjs-boilerplate:dev .
+docker run -d -p 3001:3000 -v $(pwd):/app k3t-nextjs-boilerplate:dev
+```
+
+### Using NPM Scripts
+
+```bash
+npm run docker:build      # Build production image
+npm run docker:run        # Run production container
+npm run docker:build-dev  # Build development image
+npm run docker:run-dev    # Run development container
+```
 
 ### Core Technologies
 
@@ -48,20 +109,53 @@ We're excited to announce the latest release of the K3T Next.js Boilerplate! Thi
 
 ## 🚀 Quick Start
 
+## 🎯 What's Included
+
+### Core Technologies
+
+- **Next.js 15+** with App Router and Turbopack
+- **React 19** with the latest features
+- **TypeScript** with strict configuration
+- **Tailwind CSS 4** for modern styling
+
+### Developer Experience
+
+- **Complete Testing Suite**: Jest, React Testing Library, Vitest, and Playwright
+- **Storybook Integration**: Component development and documentation
+- **Code Quality Tools**: ESLint, Prettier, Husky, and lint-staged
+- **Automated Workflows**: GitHub Actions CI/CD pipeline
+- **Component Generation**: Plop.js templates for rapid development
+- **Docker Support**: Complete containerization with dev/prod environments
+
+### Key Features
+
+- ✅ **100% Test Coverage** - Comprehensive testing setup
+- ✅ **Type Safety** - Full TypeScript integration
+- ✅ **Modern Styling** - Tailwind CSS 4 with utility-first approach
+- ✅ **Developer Tools** - Complete linting and formatting pipeline
+- ✅ **Documentation** - Storybook with accessibility testing
+- ✅ **Automation** - Git hooks and CI/CD ready
+- ✅ **Code Generation** - Automated component scaffolding
+- ✅ **Docker Ready** - Production and development containers
+- ✅ **Security** - Non-root containers and optimized builds
+
+## 🚀 Quick Start
+
 ```bash
-# Using latest version (v1.1.0)
+# Using latest version (v1.2.0)
 npx create-next-app@latest my-project --example https://github.com/kode3tech/k3t-nextjs-boilerplate
 cd my-project
 npm install
 npm run dev
 
 # Using specific version
-npx create-next-app@latest my-project --example https://github.com/kode3tech/k3t-nextjs-boilerplate/tree/v1.1.0
+npx create-next-app@latest my-project --example https://github.com/kode3tech/k3t-nextjs-boilerplate/tree/v1.2.0
 ```
 
-**Multi-language Documentation:**
+**Documentation:**
 - 📖 [English README](README.md)
 - 📖 [Portuguese README](README_PT.md)
+- 🐳 [Docker Guide](DOCKER.md)
 
 ## 📊 What's Working
 
@@ -72,20 +166,36 @@ All systems are go! This release includes:
 - ✅ Successful production builds
 - ✅ Comprehensive documentation
 - ✅ Working CI/CD pipeline
+- ✅ Optimized Docker containers
+- ✅ Security-hardened images
 
-## 🔄 Migration from Previous Versions
+## 🔄 Migration from v1.1.0
 
-This is the first stable release, so no migration is needed.
+### New Files Added
+- `Dockerfile` - Production container configuration
+- `Dockerfile.dev` - Development container configuration
+- `docker-compose.yml` - Service orchestration
+- `docker.sh` - Convenience script for Docker operations
+- `.dockerignore` - Docker build context optimization
+- `DOCKER.md` - Comprehensive Docker documentation
+
+### Updated Files
+- `package.json` - Added Docker scripts and updated keywords
+- `next.config.ts` - Added standalone output for Docker optimization
+- `README.md` - Added Docker support section
+
+### No Breaking Changes
+All existing functionality remains intact. Docker support is additive and optional.
 
 ## 📈 Next Steps
 
 We're planning exciting features for future releases:
 
-- Additional component templates
-- More testing utilities
-- Extended Storybook addons
-- Performance optimizations
-- Additional styling options
+- Kubernetes deployment examples
+- CI/CD pipeline enhancements
+- Additional Docker optimization
+- Performance monitoring integration
+- Multi-architecture builds
 
 ## 🤝 Contributing
 

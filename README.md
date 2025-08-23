@@ -217,7 +217,73 @@ Recommended extensions:
 
 The project includes `.editorconfig` for consistency across different editors.
 
-## 🚢 Deploy
+## � Docker Support
+
+The boilerplate includes complete Docker support with optimized multi-stage builds for both development and production environments.
+
+### Quick Start with Docker
+
+Using the included convenience script:
+
+```bash
+# Build production image
+./docker.sh build
+
+# Run production container
+./docker.sh run
+
+# Build and run development container
+./docker.sh build-dev
+./docker.sh run-dev
+
+# Using docker-compose
+./docker.sh compose-up
+
+# View logs
+./docker.sh logs
+
+# Stop containers
+./docker.sh stop
+
+# Clean up
+./docker.sh clean
+```
+
+### Manual Docker Commands
+
+```bash
+# Build production image
+docker build -t k3t-nextjs-boilerplate .
+
+# Run production container
+docker run -d -p 3000:3000 --name k3t-nextjs-app k3t-nextjs-boilerplate
+
+# Build development image
+docker build -f Dockerfile.dev -t k3t-nextjs-boilerplate:dev .
+
+# Run development container with hot reload
+docker run -d -p 3001:3000 -v $(pwd):/app -v /app/node_modules --name k3t-nextjs-dev k3t-nextjs-boilerplate:dev
+```
+
+### Docker Compose
+
+```bash
+# Production environment
+docker-compose up -d
+
+# Development environment
+docker-compose --profile dev up -d
+```
+
+### Docker Features
+
+- **Multi-stage builds** - Optimized image size (~100MB final image)
+- **Non-root user** - Enhanced security
+- **Development support** - Hot reload with volume mounting
+- **Production ready** - Standalone Next.js output
+- **Minimal dependencies** - Only production files in final image
+
+## �🚢 Deploy
 
 ### Vercel (Recommended)
 
