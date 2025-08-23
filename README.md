@@ -118,18 +118,18 @@ pnpm install
 
 ## 📋 Available Scripts
 
-| Script                    | Description                                         |
-| ------------------------- | --------------------------------------------------- |
-| `npm run dev`             | Start development server with Turbopack            |
-| `npm run build`           | Create production build                             |
-| `npm run start`           | Start production server                             |
-| `npm run lint`            | Run ESLint                                          |
-| `npm run test`            | Run tests with Jest                                 |
-| `npm run test:watch`      | Run tests in watch mode                             |
-| `npm run test:ci`         | Run tests for CI                                    |
-| `npm run gen:component`   | Generate new component with template               |
-| `npm run storybook`       | Start Storybook                                     |
-| `npm run build-storybook` | Build Storybook                                     |
+| Script                    | Description                             |
+| ------------------------- | --------------------------------------- |
+| `npm run dev`             | Start development server with Turbopack |
+| `npm run build`           | Create production build                 |
+| `npm run start`           | Start production server                 |
+| `npm run lint`            | Run ESLint                              |
+| `npm run test`            | Run tests with Jest                     |
+| `npm run test:watch`      | Run tests in watch mode                 |
+| `npm run test:ci`         | Run tests for CI                        |
+| `npm run gen:component`   | Generate new component with template    |
+| `npm run storybook`       | Start Storybook                         |
+| `npm run build-storybook` | Build Storybook                         |
 
 ## 🧩 Generating Components
 
