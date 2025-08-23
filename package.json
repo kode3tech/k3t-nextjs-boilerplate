@@ -1,6 +1,6 @@
 {
   "name": "k3t-nextjs-boilerplate",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A modern Next.js boilerplate with TypeScript, Tailwind CSS, Jest, Storybook, and more",
   "author": "Kode3 Tech",
   "license": "MIT",

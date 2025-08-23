@@ -77,12 +77,14 @@ k3t-nextjs-boilerplate/
 Use the `create-next-app` command with this boilerplate as an example:
 
 #### Latest Version (Recommended)
+
 ```bash
 npx create-next-app@latest my-new-project --example https://github.com/kode3tech/k3t-nextjs-boilerplate
 cd my-new-project
 ```
 
 #### Specific Version
+
 ```bash
 # Using version tag (e.g., v1.0.0)
 npx create-next-app@latest my-new-project --example https://github.com/kode3tech/k3t-nextjs-boilerplate/tree/v1.0.0
