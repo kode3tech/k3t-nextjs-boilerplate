@@ -1,6 +1,23 @@
-# 🚀 K3T Next.js Boilerplate v1.0.0
+# 🚀 K3T Next.js Boilerplate v1.1.0
 
-We're excited to announce the first stable release of the K3T Next.js Boilerplate! This comprehensive starter template provides everything you need to build modern React applications with Next.js.
+We're excited to announce the latest release of the K3T Next.js Boilerplate! This release focuses on **SEO optimization** and **multi-language support** to make the boilerplate more discoverable and accessible worldwide.
+
+## ✨ What's New in v1.1.0
+
+### 🌐 Multi-language Support
+- **Portuguese README** (`README_PT.md`) for Brazilian developers
+- Bilingual navigation between English and Portuguese versions
+- Enhanced accessibility for Portuguese-speaking community
+
+### 📈 SEO Optimization
+- **30+ strategic keywords** in `package.json` for better search discoverability
+- **GitHub repository description** optimized for search algorithms
+- Enhanced README structure with feature highlights
+
+### 🎯 Enhanced Discoverability
+- Keywords covering: `nextjs-boilerplate`, `react-typescript`, `tailwind-template`
+- Developer tools: `frontend-template`, `developer-tools`, `code-quality`
+- Testing & CI/CD: `testing`, `ci-cd`, `component-library`, `modern-stack`
 
 ## 🎯 What's Included
 
@@ -32,11 +49,19 @@ We're excited to announce the first stable release of the K3T Next.js Boilerplat
 ## 🚀 Quick Start
 
 ```bash
+# Using latest version (v1.1.0)
 npx create-next-app@latest my-project --example https://github.com/kode3tech/k3t-nextjs-boilerplate
 cd my-project
 npm install
 npm run dev
+
+# Using specific version
+npx create-next-app@latest my-project --example https://github.com/kode3tech/k3t-nextjs-boilerplate/tree/v1.1.0
 ```
+
+**Multi-language Documentation:**
+- 📖 [English README](README.md)
+- 📖 [Portuguese README](README_PT.md)
 
 ## 📊 What's Working
 
