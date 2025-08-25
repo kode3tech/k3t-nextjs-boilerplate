@@ -22,9 +22,11 @@ A complete and modern **Next.js 15+ boilerplate** for developing React applicati
 - 🏗️ **Next.js 15+ with App Router** - Latest React framework with Turbopack
 - 🔷 **TypeScript** - Full type safety and better developer experience
 - 🎨 **Tailwind CSS 4** - Modern utility-first CSS framework
+- 🌐 **Complete i18n Support** - Multi-language with automatic locale detection
 - 🧪 **Complete Testing Suite** - Jest, React Testing Library, Vitest, and Playwright
 - 📚 **Storybook** - Component development and documentation
 - 🔍 **Code Quality** - ESLint, Prettier, Husky, and Lint-staged
+- 🐳 **Docker Support** - Production-ready containerization
 - 🚀 **CI/CD Pipeline** - GitHub Actions for automated testing and deployment
 - 🛠️ **Code Generation** - Plop templates for rapid development
 - 📦 **Modern Stack** - Latest versions of all dependencies
@@ -44,6 +46,12 @@ A complete and modern **Next.js 15+ boilerplate** for developing React applicati
 
 - **[Tailwind CSS 4](https://tailwindcss.com/)** - Utility-first CSS framework
 - **[PostCSS](https://postcss.org/)** - Tool for CSS transformation
+
+### Internationalization
+
+- **[@formatjs/intl-localematcher](https://formatjs.io/)** - Advanced locale matching
+- **[Negotiator](https://github.com/jshttp/negotiator)** - Accept-Language header parsing
+- **Server-only imports** - Optimized translation loading
 
 ### Testing
 
@@ -84,18 +92,34 @@ k3t-nextjs-boilerplate/
 │   └── plopfile.js            # Generator Configuration
 ├── public/                     # Static Files
 ├── src/
-│   ├── app/                   # App Router (Next.js 13+)
+│   ├── app/                   # App Router (Next.js 15+)
+│   │   ├── [lang]/           # Dynamic locale routes
+│   │   │   ├── layout.tsx    # Localized layout
+│   │   │   └── page.tsx      # Localized pages
 │   │   ├── globals.css       # Global Styles
 │   │   ├── layout.tsx        # Root Layout
-│   │   └── page.tsx          # Home Page
-│   └── components/           # Reusable Components
-│       └── Main/
-│           ├── index.tsx     # Component
-│           ├── stories.tsx   # Storybook stories
-│           └── test.tsx      # Tests
-├── jest.config.js            # Jest Configuration
-├── vitest.config.ts          # Vitest Configuration
-└── package.json              # Dependencies and scripts
+│   │   ├── page.tsx          # Root Page (redirects)
+│   │   └── not-found.jsx     # 404 Page
+│   ├── components/           # Reusable Components
+│   │   └── Main/
+│   │       ├── index.tsx     # Component
+│   │       ├── stories.tsx   # Storybook stories
+│   │       └── test.tsx      # Tests
+│   ├── dictionaries/         # Translation Files
+│   │   ├── en.json          # English
+│   │   ├── pt.json          # Portuguese
+│   │   └── es.json          # Spanish
+│   ├── hooks/               # Custom Hooks
+│   │   └── usePathname.ts   # Navigation hook
+│   ├── lib/                 # Utilities
+│   │   └── i18n/           # i18n Configuration
+│   │       ├── get-dictionary.ts
+│   │       └── i18n-config.ts
+│   └── middleware.ts        # Next.js Middleware
+├── I18N.md                  # i18n Documentation
+├── jest.config.js          # Jest Configuration
+├── vitest.config.ts        # Vitest Configuration
+└── package.json            # Dependencies and scripts
 ```
 
 ## 🚀 How to Use This Boilerplate
@@ -294,6 +318,84 @@ docker-compose --profile dev up -d
 - **Non-root user** - Enhanced security
 - **Development support** - Hot reload with volume mounting
 - **Production ready** - Standalone Next.js output
+
+For complete Docker documentation, see [DOCKER.md](DOCKER.md).
+
+## 🌐 Internationalization (i18n)
+
+The boilerplate includes complete internationalization support with automatic locale detection and SEO-friendly URLs.
+
+### Supported Languages
+
+- **English (en)** - Default locale
+- **Portuguese (pt)** - Brazilian Portuguese
+- **Spanish (es)** - Latin American Spanish
+
+### Quick Start
+
+Visit your app and see automatic locale detection in action:
+
+```
+/                    → Redirects to /en (or your browser's preferred language)
+/en/about           → English about page
+/pt/sobre           → Portuguese about page
+/es/acerca          → Spanish about page
+```
+
+### Adding Translations
+
+1. **Update translation files:**
+
+```json
+// src/dictionaries/en.json
+{
+  "HomePage": {
+    "title": "Welcome to My App",
+    "description": "This is my awesome app"
+  }
+}
+```
+
+2. **Use in server components:**
+
+```typescript
+import { getDictionary } from '@/lib/i18n/get-dictionary'
+
+export default async function Page({ params }) {
+  const { lang } = await params
+  const t = await getDictionary(lang)
+
+  return <h1>{t.HomePage.title}</h1>
+}
+```
+
+3. **Client-side navigation:**
+
+```typescript
+import { usePathname } from '@/hooks/usePathname'
+
+export default function LanguageSwitcher() {
+  const { redirectWithLocale } = usePathname()
+
+  return (
+    <button onClick={() => redirectWithLocale('pt')}>
+      Switch to Portuguese
+    </button>
+  )
+}
+```
+
+### i18n Features
+
+- **Automatic locale detection** from Accept-Language headers
+- **SEO-friendly URLs** with locale prefixes (e.g., `/en/about`, `/pt/sobre`)
+- **Server-side translation loading** with type safety
+- **Client-side locale switching** with navigation hooks
+- **Fallback support** to default locale when needed
+- **Middleware integration** for seamless redirects
+
+**📖 For complete i18n documentation, see [I18N.md](I18N.md)**
+
 - **Minimal dependencies** - Only production files in final image
 
 ## �🚢 Deploy

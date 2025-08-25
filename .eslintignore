@@ -2,3 +2,4 @@
 !.storybook
 !.jest
 generators
+**/__tests__/*

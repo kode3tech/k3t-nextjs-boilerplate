@@ -10,14 +10,21 @@ const customJestConfig = {
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   moduleDirectories: ['node_modules', '<rootDir>/src'],
   testEnvironment: 'jest-environment-jsdom',
+  testPathIgnorePatterns: [
+    '<rootDir>/.next/',
+    '<rootDir>/node_modules/',
+    'test-utils'
+  ],
   collectCoverage: true,
   collectCoverageFrom: [
     'src/**/*.ts(x)?',
     '!src/app/**', // should be tested in e2e
-    '!src/lib/registry.tsx',
     '!src/types/**',
     '!src/**/stories.tsx',
-    '!src/styles/**'
+    '!src/styles/**',
+    '!src/**/*test-utils*',
+    '!src/lib/i18n/**',
+    '!src/middleware.ts'
   ]
 }
 
