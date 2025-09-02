@@ -1,33 +1,24 @@
-# 🚀 K3T Next.js Boilerplate v1.3.0
+# 🚀 K3T Next.js Boilerplate v1.3.1
 
-We're excited to announce the latest release of the K3T Next.js Boilerplate! This release introduces **complete internationalization (i18n) support** with automatic locale detection, SEO-friendly URLs, and comprehensive multi-language capabilities.
+We're excited to announce a maintenance release of the K3T Next.js Boilerplate! This release includes **responsive design improvements** for better mobile experience while maintaining all the powerful internationalization features from v1.3.0.
 
-## ✨ What's New in v1.3.0
+## ✨ What's New in v1.3.1
 
-### 🌐 Complete Internationalization Support
+### 📱 Enhanced Mobile Experience
 
-- **Automatic locale detection** from browser Accept-Language headers
-- **Multi-language support** for English, Portuguese, and Spanish
-- **SEO-friendly localized URLs** (e.g., `/en/about`, `/pt/sobre`, `/es/acerca`)
-- **Server-side translation loading** with full type safety
-- **Dynamic locale routing** using Next.js 15 app directory
+- **Improved logo responsiveness** in the Main component
+- **Better visual hierarchy** on smaller screens
+- **Optimized image sizing** for mobile devices
+- **Consistent spacing** across all screen sizes
 
-### 🔧 Advanced i18n Features
+### 🔧 Technical Improvements
 
-- **Middleware-based redirection** for seamless locale handling
-- **Type-safe translation system** with TypeScript support
-- **Fallback locale support** for graceful degradation
-- **Client-side locale switching** with usePathname hook
-- **Server-only imports** for optimized bundle size
+- **Updated Tailwind CSS classes** for better responsive design
+- **Mobile-first approach** with progressive enhancement
+- **Maintained accessibility** features and image optimization
+- **Preserved SEO performance** with Next.js Image component
 
-### 🚀 Developer Experience
-
-- **Comprehensive test coverage** for i18n functionality
-- **Easy-to-use hooks** for navigation and locale management
-- **Modular translation dictionaries** for maintainable content
-- **Zero-config setup** - works out of the box
-
-## 🌍 Internationalization Features
+## 🌍 Internationalization Features (from v1.3.0)
 
 ### Supported Languages
 
@@ -83,53 +74,7 @@ export default function LanguageSwitcher() {
 }
 ```
 
-### Adding New Languages
-
-1. Create translation file: `src/dictionaries/fr.json`
-2. Update locale config: `src/lib/i18n/i18n-config.ts`
-3. Add to dictionary loader: `src/lib/i18n/get-dictionary.ts`
-
-## 🔄 Migration from v1.2.0
-
-### Breaking Changes
-
-- **URL structure**: All routes now include locale prefix
-- **Layout changes**: Root layout restructured for locale support
-- **Component props**: Main component now accepts translation props
-
-### Migration Steps
-
-1. Update your routes to include locale parameters
-2. Use `getDictionary()` for translated content
-3. Replace hardcoded strings with translation keys
-4. Test locale switching functionality
-
-## 🛠️ Previous Docker Features (v1.2.0)
-
-### 🐳 Complete Docker Support
-
-- **Optimized Dockerfile** with multi-stage build (~100MB final image)
-- **Development Dockerfile** with hot reload and volume mounting
-- **docker-compose.yml** for easy service orchestration
-- **Convenience script** (`docker.sh`) for common Docker operations
-- **NPM scripts** for streamlined Docker workflows
-
-### � Security & Optimization
-
-- **Non-root user** in containers for enhanced security
-- **Alpine Linux base** for minimal image footprint
-- **Next.js standalone output** for optimal containerization
-- **Multi-stage builds** reducing final image size by 75%
-
-### 📖 Enhanced Documentation
-
-- **Comprehensive Docker guide** (`DOCKER.md`) with examples
-- **Updated README** with Docker setup instructions
-- **Troubleshooting section** for common Docker issues
-
-## 🐳 Docker Features
-
-## 🐳 Docker Features
+## 🐳 Docker Features (from v1.2.0)
 
 ### Production Environment
 
@@ -169,57 +114,7 @@ export default function LanguageSwitcher() {
 ./docker.sh compose-up
 ```
 
-### Manual Docker Commands
-
-```bash
-# Production
-docker build -t k3t-nextjs-boilerplate .
-docker run -d -p 3000:3000 k3t-nextjs-boilerplate
-
-# Development
-docker build -f Dockerfile.dev -t k3t-nextjs-boilerplate:dev .
-docker run -d -p 3001:3000 -v $(pwd):/app k3t-nextjs-boilerplate:dev
-```
-
-### Using NPM Scripts
-
-```bash
-npm run docker:build      # Build production image
-npm run docker:run        # Run production container
-npm run docker:build-dev  # Build development image
-npm run docker:run-dev    # Run development container
-```
-
-### Core Technologies
-
-- **Next.js 15+** with App Router and Turbopack
-- **React 19** with the latest features
-- **TypeScript** with strict configuration
-- **Tailwind CSS 4** for modern styling
-
-### Developer Experience
-
-- **Complete Testing Suite**: Jest, React Testing Library, Vitest, and Playwright
-- **Storybook Integration**: Component development and documentation
-- **Code Quality Tools**: ESLint, Prettier, Husky, and lint-staged
-- **Automated Workflows**: GitHub Actions CI/CD pipeline
-- **Component Generation**: Plop.js templates for rapid development
-
-### Key Features
-
-- ✅ **100% Test Coverage** - Comprehensive testing setup
-- ✅ **Type Safety** - Full TypeScript integration
-- ✅ **Modern Styling** - Tailwind CSS 4 with utility-first approach
-- ✅ **Developer Tools** - Complete linting and formatting pipeline
-- ✅ **Documentation** - Storybook with accessibility testing
-- ✅ **Automation** - Git hooks and CI/CD ready
-- ✅ **Code Generation** - Automated component scaffolding
-
-## 🚀 Quick Start
-
-## 🎯 What's Included
-
-### Core Technologies
+## 🎯 Core Technologies
 
 - **Next.js 15+** with App Router and Turbopack
 - **React 19** with the latest features
@@ -245,26 +140,22 @@ npm run docker:run-dev    # Run development container
 - ✅ **Automation** - Git hooks and CI/CD ready
 - ✅ **Code Generation** - Automated component scaffolding
 - ✅ **Docker Ready** - Production and development containers
-- ✅ **Security** - Non-root containers and optimized builds
+- ✅ **Internationalization** - Complete i18n support
+- ✅ **Mobile Responsive** - Optimized for all screen sizes
 
-## 🚀 Quick Start
+## 🔄 Migration from v1.3.0
 
-```bash
-# Using latest version (v1.2.0)
-npx create-next-app@latest my-project --example https://github.com/kode3tech/k3t-nextjs-boilerplate
-cd my-project
-npm install
-npm run dev
+### Minor Changes
 
-# Using specific version
-npx create-next-app@latest my-project --example https://github.com/kode3tech/k3t-nextjs-boilerplate/tree/v1.2.0
-```
+- **Logo sizing**: Updated responsive classes for better mobile experience
+- **No breaking changes**: All existing functionality remains intact
+- **Backward compatible**: Existing translations and routes work unchanged
 
-**Documentation:**
+### What Changed
 
-- 📖 [English README](README.md)
-- 📖 [Portuguese README](README_PT.md)
-- 🐳 [Docker Guide](DOCKER.md)
+- Updated `src/components/Main/index.tsx` with improved responsive logo sizing
+- Mobile: `w-48 h-48` (192px × 192px)
+- Desktop (MD+): `w-100 h-100` (400px × 400px)
 
 ## 📊 What's Working
 
@@ -276,38 +167,34 @@ All systems are go! This release includes:
 - ✅ Comprehensive documentation
 - ✅ Working CI/CD pipeline
 - ✅ Optimized Docker containers
-- ✅ Security-hardened images
+- ✅ Complete i18n functionality
+- ✅ Enhanced mobile responsiveness
 
-## 🔄 Migration from v1.1.0
+## 🚀 Quick Start
 
-### New Files Added
+```bash
+# Using latest version (v1.3.1)
+npx create-next-app@latest my-project --example https://github.com/kode3tech/k3t-nextjs-boilerplate
+cd my-project
+npm install
+npm run dev
+```
 
-- `Dockerfile` - Production container configuration
-- `Dockerfile.dev` - Development container configuration
-- `docker-compose.yml` - Service orchestration
-- `docker.sh` - Convenience script for Docker operations
-- `.dockerignore` - Docker build context optimization
-- `DOCKER.md` - Comprehensive Docker documentation
+**Documentation:**
 
-### Updated Files
-
-- `package.json` - Added Docker scripts and updated keywords
-- `next.config.ts` - Added standalone output for Docker optimization
-- `README.md` - Added Docker support section
-
-### No Breaking Changes
-
-All existing functionality remains intact. Docker support is additive and optional.
+- 📖 [English README](README.md)
+- 📖 [Portuguese README](README_PT.md)
+- 🐳 [Docker Guide](DOCKER.md)
 
 ## 📈 Next Steps
 
 We're planning exciting features for future releases:
 
-- Kubernetes deployment examples
-- CI/CD pipeline enhancements
-- Additional Docker optimization
+- Enhanced mobile components library
+- Advanced responsive design patterns
 - Performance monitoring integration
 - Multi-architecture builds
+- Additional language support
 
 ## 🤝 Contributing
 
