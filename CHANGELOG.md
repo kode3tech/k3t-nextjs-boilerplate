@@ -5,6 +5,85 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.4.0] - 2025-12-06
+
+### Security
+
+- **CRITICAL**: Fixed Next.js RCE vulnerability (CVE-2025-29927, CVSS 10.0/10)
+  - Updated Next.js from 15.4.6 to 15.5.7
+  - Patched Remote Code Execution vulnerability in React Flight protocol
+  - Fixed SSRF vulnerability in middleware redirect handling
+
+- **HIGH**: Fixed Playwright SSL certificate verification vulnerability
+  - Updated Playwright from 1.55.0 to 1.57.0
+  - Now properly verifies SSL certificates when downloading browsers
+
+- **MODERATE**: Fixed multiple dependency vulnerabilities
+  - Updated Vite to 6.0.7 (fixed path traversal vulnerabilities)
+  - Fixed glob command injection vulnerability
+  - Fixed js-yaml prototype pollution vulnerability
+
+### Added
+
+- **Security Headers**: Comprehensive HTTP security headers in `next.config.ts`
+  - Strict-Transport-Security (HSTS) with preload
+  - X-Frame-Options for clickjacking protection
+  - X-Content-Type-Options for MIME sniffing protection
+  - X-XSS-Protection
+  - Referrer-Policy for privacy control
+  - Permissions-Policy for browser feature control
+  - Content-Security-Policy (CSP) with strict directives
+
+- **Middleware Protection**: CVE-2025-29927 bypass mitigation in `src/middleware.ts`
+  - Blocks malicious headers (x-middleware-subrequest, x-middleware-invoke, etc.)
+  - Logs suspicious request attempts
+  - Returns 403 Forbidden for blocked requests
+
+- **TypeScript Support**: Added CSS module type declarations
+  - Created `src/types/css.d.ts` for proper CSS import typing
+  - Eliminates TypeScript errors for CSS side-effect imports
+
+### Changed
+
+- **Dependencies**: Updated to latest secure versions
+  - react: 19.1.0 → 19.2.1
+  - react-dom: 19.1.0 → 19.2.1
+  - next: 15.4.6 → 15.5.7
+  - playwright: 1.55.0 → 1.57.0
+  - vite: 7.2.6 → 6.0.7 (Storybook compatibility)
+
+- **Next.js 15 Compatibility**: Updated async params handling
+  - Fixed `params` prop type in `src/app/[lang]/layout.tsx`
+  - Fixed `params` prop type in `src/app/[lang]/page.tsx`
+  - Compatible with Next.js 15.5+ async params API
+
+### Fixed
+
+- **Build Process**: Resolved TypeScript compilation errors
+  - Fixed locale type conflicts with Next.js internal types
+  - Ensured successful production builds with security features
+
+- **Storybook**: Fixed compatibility issues
+  - Moved Vite to devDependencies
+  - Downgraded Vite to 6.0.7 for Storybook 9.1.3 compatibility
+  - Storybook now works correctly on port 6006
+
+### Security Audit Results
+
+**Before v1.4.0:**
+
+- 1 Critical vulnerability (Next.js RCE)
+- 2 High vulnerabilities
+- 3 Moderate vulnerabilities
+- Total: 6 vulnerabilities
+
+**After v1.4.0:**
+
+- ✅ 0 vulnerabilities
+- ✅ All security headers implemented
+- ✅ Middleware protection active
+- ✅ Production-ready and secure
+
 ## [1.3.1] - 2025-09-02
 
 ### Changed

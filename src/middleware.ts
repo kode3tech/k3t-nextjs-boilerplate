@@ -7,6 +7,24 @@ export function middleware(request: NextRequest) {
   const pathname = request.nextUrl.pathname
   console.log(pathname)
 
+  // Security: Block malicious headers to prevent middleware bypass
+  // CVE-2025-29927 mitigation
+  const suspiciousHeaders = [
+    'x-middleware-subrequest',
+    'x-middleware-invoke',
+    'x-invoke-path',
+    'x-invoke-query'
+  ]
+
+  for (const header of suspiciousHeaders) {
+    if (request.headers.has(header)) {
+      console.warn(
+        `[Security] Blocked request with suspicious header: ${header}`
+      )
+      return new NextResponse('Forbidden', { status: 403 })
+    }
+  }
+
   // Ignore static files and public folder
   if (
     pathname.startsWith('/public/') ||
